@@ -11,7 +11,7 @@ test("10s - 2", async ({ page }) => {
   console.log(process.env.PASSWORD);
   console.log(process.env.CLIENT_SECRET);
 
-  const obj = process.env.OBJECT;
+  const obj = JSON.parse(process.env.OBJECT!);
 
   console.log(obj.key);
   console.log(obj.value);
