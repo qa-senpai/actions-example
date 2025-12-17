@@ -5,6 +5,12 @@ on:
   schedule:
     - cron: "0 5 * * 1-5"
   workflow_dispatch:
+    inputs:
+      environment:
+        description: "Set environment where you want to run tests. Default: TCS/IDENTITY STAGING"
+        type: environment
+        required: false
+        default: "TCS/IDENTITY STAGING"
 
 jobs:
   test:
