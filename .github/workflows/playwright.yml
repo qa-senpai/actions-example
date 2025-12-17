@@ -1,9 +1,12 @@
 name: E2E Tests
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
+  schedule:
+    - cron: "0 5 * * 1-5"
+  workflow_dispatch:
 
 jobs:
   test:
