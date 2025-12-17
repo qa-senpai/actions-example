@@ -13,6 +13,7 @@ jobs:
     env:
       PASSWORD: ${{ secrets.PASSWORD}}
       CLIENT_SECRET: ${{ vars.CLIENT_SECRET_VAR}}
+      OBJECT: ${{vars.OBJECT}}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
