@@ -32,10 +32,12 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
-      BASEURL: ${{inputs.baseUrl}}
+      # BASEURL: ${{inputs.baseUrl}}
       PASSWORD: ${{ inputs.password}}
       CLIENT_SECRET: ${{ inputs.clientSecret}}
       OBJECT: ${{vars.OBJECT}}
+      BASEURL: ${{vars.BASEURL}}
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
