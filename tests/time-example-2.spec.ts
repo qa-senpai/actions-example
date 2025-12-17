@@ -8,14 +8,23 @@ test.describe("test second", () => {
 });
 
 test("10s - 2", async ({ page }) => {
+  console.log(process.env.PASSWORD);
+  console.log(process.env.CLIENT_SECRET);
+
   await page.waitForTimeout(10_000);
 });
 
 test("30s - 2", async ({ page }) => {
+  console.log(process.env.PASSWORD);
+  console.log(process.env.CLIENT_SECRET);
+
   await page.waitForTimeout(30_000);
 });
 
 test("40s - 2", async ({ page }) => {
+  console.log(process.env.PASSWORD);
+  console.log(process.env.CLIENT_SECRET);
+
   await page.waitForTimeout(40_000);
 });
 
