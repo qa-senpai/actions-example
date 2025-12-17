@@ -18,20 +18,20 @@ test("30s - 2", async ({ page }) => {
   console.log(process.env.PASSWORD);
   console.log(process.env.CLIENT_SECRET);
 
-  await page.waitForTimeout(30_000);
+  // await page.waitForTimeout(30_000);
 });
 
 test("40s - 2", async ({ page }) => {
   console.log(process.env.PASSWORD);
   console.log(process.env.CLIENT_SECRET);
 
-  await page.waitForTimeout(40_000);
+  // await page.waitForTimeout(40_000);
 });
 
-test("120s - 2", async ({ page }) => {
-  await page.waitForTimeout(120_000);
-});
+// test("120s - 2", async ({ page }) => {
+//   await page.waitForTimeout(120_000);
+// });
 
-test("1s - 2", async ({ page }) => {
-  await page.waitForTimeout(1_000);
-});
+// test("1s - 2", async ({ page }) => {
+//   await page.waitForTimeout(1_000);
+// });
