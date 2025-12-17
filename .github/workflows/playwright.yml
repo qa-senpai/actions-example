@@ -12,10 +12,15 @@ on:
         required: false
         default: "TCS/IDENTITY STAGING"
 
-      password:
+      baseUrl:
         description: "set a password for user"
-        type: string
+        type: choice
         required: true
+        options:
+          - https://dev.com
+          - https://qa.com
+          - https://staging.com
+          - https://prod.com
 
       clientSecret:
         description: "set a password for user"
@@ -27,6 +32,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
+      BASEURL: ${{inputs.baseUrl}}
       PASSWORD: ${{ inputs.password}}
       CLIENT_SECRET: ${{ inputs.clientSecret}}
       OBJECT: ${{vars.OBJECT}}

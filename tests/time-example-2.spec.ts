@@ -7,10 +7,10 @@ test.describe("test second", () => {
   // });
 });
 
-test("10s - 2", async ({ page }) => {
+test("10s - 2", async ({ page, baseURL }) => {
   console.log(process.env.PASSWORD);
   console.log(process.env.CLIENT_SECRET);
-
+  console.log(baseURL);
   const obj = JSON.parse(process.env.OBJECT!);
 
   console.log(obj.key);
