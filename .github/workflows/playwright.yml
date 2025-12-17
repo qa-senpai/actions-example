@@ -11,8 +11,8 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
-      PASSWORD: 1251521
-      CLIENT_SECRET: p1325125safa-asfas
+      PASSWORD: ${{ secrets.PASSWORD}}
+      CLIENT_SECRET: ${{ vars.CLIENT_SECRET_VAR}}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
