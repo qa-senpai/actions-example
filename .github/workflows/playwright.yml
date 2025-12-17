@@ -12,13 +12,23 @@ on:
         required: false
         default: "TCS/IDENTITY STAGING"
 
+      password:
+        description: "set a password for user"
+        type: string
+        required: true
+
+      clientSecret:
+        description: "set a password for user"
+        type: string
+        required: true
+
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
-      PASSWORD: ${{ secrets.PASSWORD}}
-      CLIENT_SECRET: ${{ vars.CLIENT_SECRET_VAR}}
+      PASSWORD: ${{ inputs.password}}
+      CLIENT_SECRET: ${{ inputs.clientSecret}}
       OBJECT: ${{vars.OBJECT}}
     steps:
       - uses: actions/checkout@v4
